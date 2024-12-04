@@ -1,10 +1,10 @@
 TARGET	:= program
 
-CC		:=
-DEBUG	:=
-
 CFLAGS	:=
 LFLAGS	:=
+
+CC		:=
+DEBUG	:=
 
 ifdef CC
 AS		:= /usr/aarch64-linux-gnu/bin/as
@@ -28,7 +28,11 @@ else
 endif
 
 obj/%.o: %.s | obj
+ifdef DEBUG
+	$(AS) --gstabs -c $< $(CFLAGS) -o $@
+else
 	$(AS) -c $< $(CFLAGS) -o $@
+endif
 
 bin obj:
 	@mkdir $@
