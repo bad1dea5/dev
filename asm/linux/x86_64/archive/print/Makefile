@@ -1,8 +1,9 @@
 TARGET	:= program
 
 DEBUG	:=
+
 CFLAGS	:=
-LFLAGS	:= -I/lib64/ld-linux-x86-64.so.2
+LFLAGS	:=
 
 OBJECTS	:= $(patsubst %.s, obj/%.o, $(wildcard *.s))
 
@@ -10,6 +11,9 @@ OBJECTS	:= $(patsubst %.s, obj/%.o, $(wildcard *.s))
 
 all: $(TARGET)
 
+#
+#	Linker
+#
 $(TARGET): $(OBJECTS) | bin
 ifdef DEBUG
 	ld -o bin/$@ $(LFLAGS) $^
@@ -17,8 +21,15 @@ else
 	ld -s -o bin/$@ $(LFLAGS) $^
 endif
 
+#
+#	Assembler
+#
 obj/%.o: %.s | obj
+ifdef DEBUG
+	as --gstabs -c $< $(CFLAGS) -o $@
+else
 	as -c $< $(CFLAGS) -o $@
+endif
 
 bin obj:
 	@mkdir $@
