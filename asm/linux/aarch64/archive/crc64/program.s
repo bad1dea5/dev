@@ -17,7 +17,7 @@
         mov     x1, title_length
         bl      crc64
 
-        ldp     x29, x30, [sp, 0x20]
+        ldp     x29, x30, [sp], 0x20
 
         mov     x0, 0x0
         mov     w8, 0x5d
