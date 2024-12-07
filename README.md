@@ -8,10 +8,12 @@ A centralized deposit of assorted bytes.
 		- [Program](asm/linux/aarch64/program/)
 		- Archive
 			1. [crc64](asm/linux/aarch64/archive/crc64/)
-			2. [strlen](asm/linux/aarch64/archive/strlen/)
+			2. [strcmp](asm/linux/aarch64/archive/strcmp/)
+			3. [strlen](asm/linux/aarch64/archive/strlen/)
 		- Libs
 			1. [crc64](asm/linux/aarch64/lib/crc64.s)
-			2. [strlen](asm/linux/aarch64/lib/strlen.s)
+			2. [strcmp](asm/linux/aarch64/lib/strcmp/)
+			3. [strlen](asm/linux/aarch64/lib/strlen.s)
 - **x86-64**
 	- *ASM*
 		- [Program](asm/linux/x86_64/program/)
