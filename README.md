@@ -21,7 +21,8 @@ A centralized deposit of assorted bytes.
 			1. [print](asm/linux/x86_64/archive/print/)
 		- Libs
 			1. [crc64](asm/linux/x86_64/lib/crc64.s)
-			2. [strlen](asm/linux/x86_64/lib/strlen.s)
+			2. [memset](asm/linux/x86_64/lib/memset.s)
+			3. [strlen](asm/linux/x86_64/lib/strlen.s)
 
 ### **Windows**
 - **x86-64**
