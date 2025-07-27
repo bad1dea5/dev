@@ -11,6 +11,7 @@ Unknown
 		1. [Program](asm/x86_64/linux/program/)
 		2. [CRC64](asm/x86_64/linux/crc64/)
 		3. [strlen_s](asm/x86_64/linux/strlen_s/)
+  	4. [shared ojbject](asm/x86_64/linux/shared_objects)
 
 ### C++
 1. [Program](cpp/program/)
